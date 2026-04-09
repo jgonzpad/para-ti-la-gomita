@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un Mensaje Especial</title>
+  <style>
+    :root {
+      --sky-top: #f7e6a6;
+      --sky-bottom: #fdf8ea;
+      --card-bg: rgba(255, 248, 234, 0.88);
+      --text: #4b2f1f;
+      --accent: #7b4b1e;
+      --petal: #f6b81a;
+      --petal-deep: #e69711;
+      --center: #5e3b1c;
+      --leaf: #4f8a3a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.65), transparent 35%),
+        linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+    }
+
+    .scene {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .sunflower {
+      position: absolute;
+      bottom: -4vh;
+      width: var(--size);
+      height: calc(var(--size) * 1.7);
+      left: var(--x);
+      animation: sway var(--speed) ease-in-out infinite;
+      transform-origin: bottom center;
+      opacity: 0.95;
+    }
+
+    .stem {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: calc(var(--size) * 0.08);
+      height: 60%;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, #6da84f, #3d6e2d);
+      border-radius: 999px;
+    }
+
+    .leaf {
+      position: absolute;
+      bottom: 24%;
+      width: 28%;
+      height: 12%;
+      background: linear-gradient(135deg, #6fab49, var(--leaf));
+      border-radius: 100% 0;
+    }
+
+    .leaf.left {
+      left: 22%;
+      transform: rotate(-35deg);
+    }
+
+    .leaf.right {
+      right: 22%;
+      transform: scaleX(-1) rotate(-35deg);
+    }
+
+    .flower {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 74%;
+      aspect-ratio: 1;
+      transform: translateX(-50%);
+    }
+
+    .petal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 22%;
+      height: 42%;
+      margin: -21% 0 0 -11%;
+      background: linear-gradient(180deg, #ffe37a, var(--petal) 58%, var(--petal-deep));
+      border-radius: 55% 55% 45% 45%;
+      transform-origin: 50% 88%;
+      box-shadow: 0 0 10px rgba(246, 184, 26, 0.28);
+    }
+
+    .center {
+      position: absolute;
+      inset: 31%;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 35%, #8b5a2f, var(--center) 55%, #3a2412);
+      box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: min(720px, calc(100vw - 32px));
+      padding: 36px 30px;
+      border-radius: 28px;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 24px 60px rgba(104, 64, 24, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.05;
+      color: var(--accent);
+      text-align: center;
+    }
+
+    p {
+      margin: 0 0 14px;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      line-height: 1.7;
+      text-align: center;
+      text-wrap: balance;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    @keyframes sway {
+      0%, 100% {
+        transform: rotate(-2deg);
+      }
+      50% {
+        transform: rotate(2deg);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 28px 22px;
+        border-radius: 22px;
+      }
+
+      .sunflower {
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <div class="sunflower" style="--x: -2vw; --size: 22vw; --speed: 7s;">
+      <div class="flower">
+        <div class="petal" style="transform: rotate(0deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(30deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(60deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(90deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(120deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(150deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(180deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(210deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(240deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(270deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(300deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(330deg) translateY(-120%);"></div>
+        <div class="center"></div>
+      </div>
+      <div class="stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+    </div>
+
+    <div class="sunflower" style="--x: 14vw; --size: 16vw; --speed: 6s;">
+      <div class="flower">
+        <div class="petal" style="transform: rotate(0deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(30deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(60deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(90deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(120deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(150deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(180deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(210deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(240deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(270deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(300deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(330deg) translateY(-120%);"></div>
+        <div class="center"></div>
+      </div>
+      <div class="stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+    </div>
+
+    <div class="sunflower" style="--x: 72vw; --size: 19vw; --speed: 8s;">
+      <div class="flower">
+        <div class="petal" style="transform: rotate(0deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(30deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(60deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(90deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(120deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(150deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(180deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(210deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(240deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(270deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(300deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(330deg) translateY(-120%);"></div>
+        <div class="center"></div>
+      </div>
+      <div class="stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+    </div>
+
+    <div class="sunflower" style="--x: 86vw; --size: 14vw; --speed: 5.5s;">
+      <div class="flower">
+        <div class="petal" style="transform: rotate(0deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(30deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(60deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(90deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(120deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(150deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(180deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(210deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(240deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(270deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(300deg) translateY(-120%);"></div>
+        <div class="petal" style="transform: rotate(330deg) translateY(-120%);"></div>
+        <div class="center"></div>
+      </div>
+      <div class="stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+    </div>
+  </div>
+
+  <main class="card">
+    <h1>Para ti la gomita</h1>
+    <p>Solo quería decirte algo…</p>
+    <p>Me pareces una mujer muy muy linda, no solo por fuera sino también por lo que transmites.</p>
+    <p>Me gusta mucho hablar contigo, haces que todo sea más agradable.</p>
+    <p>Siento que tienes algo especial que no se encuentra fácilmente.</p>
+    <p>Me encantaría seguir conociéndote poco a poco.</p>
+  </main>
+</body>
+</html>
