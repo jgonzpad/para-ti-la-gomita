@@ -131,6 +131,17 @@
       line-height: 1.05;
       color: var(--accent);
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .gummy {
+      width: clamp(30px, 4vw, 42px);
+      height: auto;
+      filter: drop-shadow(0 6px 10px rgba(146, 13, 32, 0.22));
     }
 
     p {
@@ -255,7 +266,21 @@
   </div>
 
   <main class="card">
-    <h1>Para ti, La Gomita</h1>
+    <h1>
+      <span>Para ti, La Gomita</span>
+      <svg class="gummy" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="gummyBody" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ff6b7a"></stop>
+            <stop offset="100%" stop-color="#cf1837"></stop>
+          </linearGradient>
+        </defs>
+        <path d="M22 12c0-5 4-9 10-9s10 4 10 9c0 3-1 5-1 7 0 2 1 4 3 6 5 5 8 12 8 19 0 11-9 20-20 20S12 55 12 44c0-7 3-14 8-19 2-2 3-4 3-6 0-2-1-4-1-7Z" fill="url(#gummyBody)"></path>
+        <path d="M25 13c0-3 3-6 7-6s7 3 7 6c0 2-.6 3.5-.6 5.2 0 2.5 1.4 4.8 3.5 6.9 4.2 4.2 6.7 10 6.7 15.9 0 9.5-7.7 17.2-17.2 17.2S15.9 50.5 15.9 41c0-5.9 2.5-11.7 6.7-15.9 2.1-2.1 3.5-4.4 3.5-6.9 0-1.7-1.1-3.2-1.1-5.2Z" fill="none" opacity="0.18" stroke="#ffffff" stroke-width="2"></path>
+        <circle cx="26" cy="18" r="2.2" fill="#fff2f4" opacity="0.7"></circle>
+        <circle cx="34" cy="14" r="1.6" fill="#fff2f4" opacity="0.6"></circle>
+      </svg>
+    </h1>
     <p>Solo quería decirte algo...</p>
     <p>Me pareces una mujer muy, muy linda, no solo por fuera, sino también por lo que transmites.</p>
     <p>Me gusta mucho hablar contigo; haces que todo sea más agradable.</p>
