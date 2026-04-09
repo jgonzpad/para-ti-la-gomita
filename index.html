@@ -139,37 +139,11 @@
     }
 
     .gummy {
-      position: relative;
-      width: clamp(28px, 4vw, 40px);
-      height: clamp(38px, 5vw, 54px);
-      border-radius: 45% 45% 38% 38%;
-      background: linear-gradient(180deg, #ff7a88, #d51d3e);
-      box-shadow:
-        inset 0 2px 4px rgba(255, 255, 255, 0.35),
-        0 6px 12px rgba(146, 13, 32, 0.24);
-      transform: rotate(8deg);
+      width: clamp(58px, 8vw, 84px);
+      height: auto;
       flex: 0 0 auto;
-    }
-
-    .gummy::before {
-      content: "";
-      position: absolute;
-      top: 16%;
-      left: 22%;
-      width: 22%;
-      height: 16%;
-      border-radius: 50%;
-      background: rgba(255, 242, 244, 0.7);
-    }
-
-    .gummy::after {
-      content: "";
-      position: absolute;
-      inset: 8% 10% auto;
-      height: 38%;
-      border: 2px solid rgba(255, 255, 255, 0.18);
-      border-bottom: 0;
-      border-radius: 45% 45% 30% 30%;
+      filter: drop-shadow(0 8px 12px rgba(146, 13, 32, 0.22));
+      transform: translateY(3px);
     }
 
     p {
@@ -205,7 +179,8 @@
       }
 
       .gummy {
-        transform: rotate(6deg) translateY(2px);
+        width: 62px;
+        transform: translateY(2px);
       }
     }
   </style>
@@ -300,7 +275,42 @@
   <main class="card">
     <h1>
       <span>Para ti, La Gomita</span>
-      <span class="gummy" aria-hidden="true"></span>
+      <svg class="gummy" viewBox="0 0 120 92" aria-hidden="true">
+        <defs>
+          <radialGradient id="gummyRed" cx="35%" cy="28%" r="75%">
+            <stop offset="0%" stop-color="#ff8a97"></stop>
+            <stop offset="48%" stop-color="#ef405c"></stop>
+            <stop offset="100%" stop-color="#b60f2e"></stop>
+          </radialGradient>
+          <radialGradient id="sugar" cx="50%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.95)"></stop>
+            <stop offset="100%" stop-color="rgba(255,255,255,0)"></stop>
+          </radialGradient>
+          <g id="berry">
+            <path d="M15 24c0-7 5-12 12-12 3 0 6 1 8 3 2-3 5-5 9-5 6 0 11 5 11 11 0 2 0 4-1 5 4 3 6 8 6 13 0 10-8 18-18 18H27C17 57 9 49 9 39c0-6 2-11 6-15Z" fill="url(#gummyRed)"></path>
+            <circle cx="22" cy="26" r="3" fill="rgba(255,255,255,0.65)"></circle>
+            <circle cx="33" cy="19" r="2.4" fill="rgba(255,255,255,0.62)"></circle>
+            <circle cx="45" cy="25" r="2.8" fill="rgba(255,255,255,0.55)"></circle>
+            <circle cx="39" cy="36" r="2.1" fill="rgba(255,255,255,0.52)"></circle>
+            <ellipse cx="33" cy="50" rx="20" ry="6" fill="rgba(120, 8, 28, 0.18)"></ellipse>
+          </g>
+        </defs>
+        <g transform="translate(2 18) scale(0.78)">
+          <use href="#berry"></use>
+        </g>
+        <g transform="translate(24 2) scale(0.84)">
+          <use href="#berry"></use>
+        </g>
+        <g transform="translate(48 14) scale(0.78)">
+          <use href="#berry"></use>
+        </g>
+        <g transform="translate(18 28) scale(0.9)">
+          <use href="#berry"></use>
+        </g>
+        <g transform="translate(50 30) scale(0.88)">
+          <use href="#berry"></use>
+        </g>
+      </svg>
     </h1>
     <p>Solo quería decirte algo...</p>
     <p>Me pareces una mujer muy, muy linda, no solo por fuera, sino también por lo que transmites.</p>
