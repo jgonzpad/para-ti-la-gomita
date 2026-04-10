@@ -149,6 +149,62 @@
       box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.22), 0 6px 16px rgba(92, 49, 14, 0.18);
     }
 
+    .blossom {
+      position: absolute;
+      bottom: -4vh;
+      width: var(--size);
+      height: calc(var(--size) * 1.55);
+      left: var(--x);
+      animation: sway var(--speed) ease-in-out infinite;
+      animation-delay: var(--delay, 0s);
+      transform-origin: bottom center;
+      opacity: 0.88;
+    }
+
+    .blossom .stem {
+      width: calc(var(--size) * 0.07);
+      height: 56%;
+      background: linear-gradient(180deg, #8ad06f, #4f8d3d);
+    }
+
+    .blossom .leaf {
+      bottom: 20%;
+      width: 26%;
+      height: 11%;
+      background: linear-gradient(135deg, #91d874, #5f9d48);
+    }
+
+    .blossom-flower {
+      position: absolute;
+      top: 6%;
+      left: 50%;
+      width: 68%;
+      aspect-ratio: 1;
+      transform: translateX(-50%);
+      filter: drop-shadow(0 10px 18px rgba(173, 76, 113, 0.18));
+    }
+
+    .blossom-petal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24%;
+      height: 34%;
+      margin: -17% 0 0 -12%;
+      border-radius: 68% 68% 52% 52%;
+      background: linear-gradient(180deg, #ffe5ef, #ff98ba 58%, #ef6d97);
+      transform-origin: 50% 92%;
+      box-shadow: 0 0 14px rgba(255, 135, 176, 0.22);
+    }
+
+    .blossom-center {
+      position: absolute;
+      inset: 34%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #fff1b0, #f5c45a 58%, #ca8c25);
+      box-shadow: inset 0 0 14px rgba(255, 255, 255, 0.22), 0 4px 12px rgba(172, 109, 33, 0.16);
+    }
+
     .float-petal,
     .spark {
       position: absolute;
@@ -348,6 +404,7 @@
       }
 
       .sunflower { opacity: 0.82; }
+      .blossom { opacity: 0.7; }
       .float-petal { opacity: 0.24; }
     }
   </style>
@@ -434,6 +491,74 @@
         <div class="petal" style="transform: rotate(300deg) translateY(-120%);"></div>
         <div class="petal" style="transform: rotate(330deg) translateY(-120%);"></div>
         <div class="center"></div>
+      </div>
+      <div class="stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+    </div>
+
+    <div class="blossom" style="--x: 5vw; --size: 11vw; --speed: 6.8s; --delay: -1.2s;">
+      <div class="blossom-flower">
+        <div class="blossom-petal" style="transform: rotate(0deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(45deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(90deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(135deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(180deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(225deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(270deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(315deg) translateY(-116%);"></div>
+        <div class="blossom-center"></div>
+      </div>
+      <div class="stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+    </div>
+
+    <div class="blossom" style="--x: 24vw; --size: 9vw; --speed: 5.9s; --delay: -2.4s;">
+      <div class="blossom-flower">
+        <div class="blossom-petal" style="transform: rotate(0deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(45deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(90deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(135deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(180deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(225deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(270deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(315deg) translateY(-116%);"></div>
+        <div class="blossom-center"></div>
+      </div>
+      <div class="stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+    </div>
+
+    <div class="blossom" style="--x: 69vw; --size: 10vw; --speed: 7.1s; --delay: -0.8s;">
+      <div class="blossom-flower">
+        <div class="blossom-petal" style="transform: rotate(0deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(45deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(90deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(135deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(180deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(225deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(270deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(315deg) translateY(-116%);"></div>
+        <div class="blossom-center"></div>
+      </div>
+      <div class="stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+    </div>
+
+    <div class="blossom" style="--x: 93vw; --size: 8vw; --speed: 6.3s; --delay: -3.1s;">
+      <div class="blossom-flower">
+        <div class="blossom-petal" style="transform: rotate(0deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(45deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(90deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(135deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(180deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(225deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(270deg) translateY(-116%);"></div>
+        <div class="blossom-petal" style="transform: rotate(315deg) translateY(-116%);"></div>
+        <div class="blossom-center"></div>
       </div>
       <div class="stem"></div>
       <div class="leaf left"></div>
